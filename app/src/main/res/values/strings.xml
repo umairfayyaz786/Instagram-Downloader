@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Instagram Downloader</string>
     <!-- Email, Privacy, Developer Account -->
-    <string name="email_feedback">banrossyn@gmail.com</string>
+    <string name="email_feedback">umairfayyaz12345@gmail.com</string>
     <string name="policy_url">https://androidwithrossyn.github.io/InstagramDownloader/privacy%20policy.html</string>
     <string name="developer">Ban Rossyn</string>
     <string name="developer_account_link">https://github.com/AndroidWithRossyn</string>

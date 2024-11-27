@@ -4,6 +4,8 @@
     android:layout_width="350dp"
     android:layout_height="480dp"
     android:layout_gravity="center"
+    android:backgroundTint="@color/white"
+    app:cardCornerRadius="10dp"
     android:elevation="5dp">
 
 
@@ -136,11 +138,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="@string/rating_dialog_submit"
+                        android:text="Rate Us"
                         android:textAllCaps="true"
                         android:textSize="20sp"
-                        android:background="@color/blues"
-                        android:textColor="@color/colorInActive"/>
+                        android:background="#EA4956"
+                        android:textColor="@color/white"/>
 
                 </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>

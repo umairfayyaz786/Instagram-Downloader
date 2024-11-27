@@ -22,10 +22,10 @@
             android:layout_width="80dp"
             android:layout_height="35dp"
             android:background="@drawable/background_login"
-            android:backgroundTint="@color/bluesnormal"
+            android:backgroundTint="#7A7A7A"
             android:gravity="center"
             android:text="@string/login"
-            android:textColor="@color/colorInActive"
+            android:textColor="@color/white"
             android:textSize="15sp" />
 
     </LinearLayout>
