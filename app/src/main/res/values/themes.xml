@@ -1,0 +1,62 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.InstagramDownloader" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- toolbar. -->
+        <item name="colorPrimary">@color/white</item>
+        <!--        StatusBar-->
+        <item name="colorPrimaryDark">@color/white</item>
+
+        <item name="colorAccent">@color/white</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <!--        <item name="android:navigationBarColor" >@color/blues</item>-->
+        <item name="android:statusBarColor">@color/white</item>
+
+        <item name="android:fontFamily">@font/open_sans</item>
+
+    </style>
+
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+    <style name="Theme.InstagramDownloader.splace" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryVariant">#E668A0B0</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/background</item>
+        <item name="colorSecondaryVariant">#E668A0B0</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+    </style>
+
+    <style name="Theme.InstagramDownloader.AdAttribution">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:textColor">@color/fb</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:text">@string/ad_attribution</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:width">15dp</item>
+        <item name="android:height">15dp</item>
+    </style>
+
+
+</resources>

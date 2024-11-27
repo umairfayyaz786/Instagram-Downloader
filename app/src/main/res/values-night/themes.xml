@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.InstagramDownloader" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/white</item>
+
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:statusBarColor">@color/blues</item>
+        <item name="android:fontFamily">@font/open_sans</item>
+
+    </style>
+</resources>
