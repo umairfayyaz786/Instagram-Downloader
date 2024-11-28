@@ -69,4 +69,18 @@
     <string name="login_with_instagram">Must Login With Instagram</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_url">https://www.instagram.com/accounts/login/</string>
+    <string name="session">sessionid</string>
+    <string name="csrftoken">csrftoken</string>
+    <string name="user_id">ds_user_id</string>
+    <string name="result">result</string>
+    <string name="imagedatafile">ImageDataFile</string>
+    <string name="position">Position</string>
+    <string name="current_position">Current position==</string>
+    <string name="mp4">.mp4</string>
+    <string name="pathvideo">PathVideo</string>
+    <string name="fromstreaming">fromStreaming</string>
+    <string name="fullscreen">FullScreen</string>
+    <string name="set_icon_full_screen">--set icon full screen--</string>
+    <string name="set_icon_small_full_screen">--set icon small full screen--</string>
 </resources>

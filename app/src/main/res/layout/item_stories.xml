@@ -9,7 +9,7 @@
     android:focusable="true"
     app:cardCornerRadius="15dp">
 
-    <com.instagram.downloader.Widget.SquareLayout
+    <com.instagram.downloader.Utils.Widget.SquareLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -47,5 +47,5 @@
 
         </RelativeLayout>
 
-    </com.instagram.downloader.Widget.SquareLayout>>
+    </com.instagram.downloader.Utils.Widget.SquareLayout>>
 </androidx.cardview.widget.CardView>

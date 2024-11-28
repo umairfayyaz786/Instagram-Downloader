@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".Fragments.StoryFragment">
+    tools:context=".Views.Fragments.StoryFragment">
 
 
     <LinearLayout
@@ -77,35 +77,35 @@
             android:orientation="horizontal"
             android:weightSum="5">
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_circle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_circle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_circle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/background_circle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
@@ -169,7 +169,7 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -177,7 +177,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -185,7 +185,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -201,7 +201,7 @@
             android:orientation="horizontal"
             android:weightSum="3">
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -209,7 +209,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -217,7 +217,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -235,7 +235,7 @@
             android:weightSum="3">
 
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -243,7 +243,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -251,7 +251,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -267,7 +267,7 @@
             android:weightSum="3">
 
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -275,7 +275,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -283,7 +283,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/background_rectangle" />
 
-            <com.instagram.downloader.Widget.SquareLayout
+            <com.instagram.downloader.Utils.Widget.SquareLayout
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent"

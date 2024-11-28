@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.R;
-import com.instagram.downloader.StoriesFullViewActivity;
+import com.instagram.downloader.Views.Activities.StoriesFullViewActivity;
 import com.instagram.downloader.Utils.DirectoryUtils;
 import com.instagram.downloader.Utils.Utils;
-import com.instagram.downloader.VideoPlayerActivity;
-import com.instagram.downloader.api.model.ItemModel;
+import com.instagram.downloader.Views.Activities.VideoPlayerActivity;
+import com.instagram.downloader.ViewModel.Api.Model.ItemModel;
 
 import java.util.ArrayList;
 

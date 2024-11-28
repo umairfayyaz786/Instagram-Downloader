@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import androidx.viewpager.widget.PagerAdapter;
 import com.bumptech.glide.Glide;
-import com.instagram.downloader.PreviewActivity;
+import com.instagram.downloader.Views.Activities.PreviewActivity;
 import com.instagram.downloader.R;
-import com.instagram.downloader.VideoPlayerActivity;
+import com.instagram.downloader.Views.Activities.VideoPlayerActivity;
 
 import org.jetbrains.annotations.NotNull;
 import java.io.File;

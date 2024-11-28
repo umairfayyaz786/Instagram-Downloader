@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.Interface.UserListInterface;
 import com.instagram.downloader.R;
-import com.instagram.downloader.api.model.TrayModel;
+import com.instagram.downloader.ViewModel.Api.Model.TrayModel;
 
 import java.util.ArrayList;
 

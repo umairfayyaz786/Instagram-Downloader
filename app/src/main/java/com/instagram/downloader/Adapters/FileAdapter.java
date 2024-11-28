@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.Interface.FileClickInterface;
 import com.instagram.downloader.R;
-import com.instagram.downloader.VideoPlayerActivity;
+import com.instagram.downloader.Views.Activities.VideoPlayerActivity;
 
 import java.io.File;
 import java.text.DecimalFormat;
@@ -61,20 +61,12 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
             Log.d(TAG, "onBindViewHolder: "+ex.getLocalizedMessage());
         }
 
-        viewHolder.relativeLayoutContent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                fileListClickInterface.getPosition(i, fileItem);
-            }
-        });
+        viewHolder.relativeLayoutContent.setOnClickListener(v -> fileListClickInterface.getPosition(i, fileItem));
 
-        viewHolder.imageViewPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, VideoPlayerActivity.class);
-                intent.putExtra("PathVideo", fileItem.getPath().toString());
-                context.startActivity(intent);
-            }
+        viewHolder.imageViewPlay.setOnClickListener(v -> {
+            Intent intent = new Intent(context, VideoPlayerActivity.class);
+            intent.putExtra("PathVideo", fileItem.getPath().toString());
+            context.startActivity(intent);
         });
 
     }
