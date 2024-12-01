@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.R;
 import com.instagram.downloader.Views.Activities.StoriesFullViewActivity;
@@ -37,7 +39,7 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
 
-        if (!storyItemModelList.isEmpty()){
+        if (!storyItemModelList.isEmpty()) {
             return;
         }
         final ItemModel itemModel = this.storyItemModelList.get(i);
@@ -54,41 +56,37 @@ public class StoryAdapter extends RecyclerView.Adapter<StoryAdapter.ViewHolder> 
 
         viewHolder.imageViewPlay.setOnClickListener(view -> {
             Intent intent = new Intent(StoryAdapter.this.context, VideoPlayerActivity.class);
-            intent.putExtra("PathVideo", itemModel.getVideoversions().get(0).getUrl());
+            intent.putExtra(context.getString(R.string.pathvideo), itemModel.getVideoversions().get(0).getUrl());
             StoryAdapter.this.context.startActivity(intent);
 
         });
 
-        viewHolder.imageViewCover.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                if (itemModel.getMediatype() == 2) {
-                    Intent intent = new Intent(StoryAdapter.this.context, VideoPlayerActivity.class);
-                    intent.putExtra("PathVideo", itemModel.getVideoversions().get(0).getUrl());
-                    StoryAdapter.this.context.startActivity(intent);
-                    return;
-                }
-                Intent intent2 = new Intent(StoryAdapter.this.context, StoriesFullViewActivity.class);
-                intent2.putExtra("ImageDataFile", itemModel.getImageversions2().getCandidates().get(0).getUrl());
-                StoryAdapter.this.context.startActivity(intent2);
+        viewHolder.imageViewCover.setOnClickListener(view -> {
+            if (itemModel.getMediatype() == 2) {
+                Intent intent = new Intent(StoryAdapter.this.context, VideoPlayerActivity.class);
+                intent.putExtra(context.getString(R.string.pathvideo), itemModel.getVideoversions().get(0).getUrl());
+                StoryAdapter.this.context.startActivity(intent);
+                return;
             }
+            Intent intent2 = new Intent(StoryAdapter.this.context, StoriesFullViewActivity.class);
+            intent2.putExtra(context.getString(R.string.imagedatafile), itemModel.getImageversions2().getCandidates().get(0).getUrl());
+            StoryAdapter.this.context.startActivity(intent2);
         });
 
 
-        viewHolder.imageViewDownload.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (itemModel.getMediatype() == 2) {
-                    String url = itemModel.getVideoversions().get(0).getUrl();
-                    Context context = StoryAdapter.this.context;
-                    Utils.startDownload(url, DirectoryUtils.FOLDER, context, "Instagram_story_" + System.currentTimeMillis() + ".mp4");
-                    return;
-                }
-                String url2 = itemModel.getImageversions2().getCandidates().get(0).getUrl();
-                Context context2 = StoryAdapter.this.context;
-                Utils.startDownload(url2, DirectoryUtils.FOLDER, context2, "Instagram_story_" + System.currentTimeMillis() + ".png");
+        viewHolder.imageViewDownload.setOnClickListener(view -> {
+            if (itemModel.getMediatype() == 2) {
+                String url = itemModel.getVideoversions().get(0).getUrl();
+                Context context = StoryAdapter.this.context;
+                Utils.startDownload(url, DirectoryUtils.FOLDER, context, context.getString(R.string.instagram_story) + System.currentTimeMillis() + context.getString(R.string.mp4));
+                return;
             }
+            String url2 = itemModel.getImageversions2().getCandidates().get(0).getUrl();
+            Context context2 = StoryAdapter.this.context;
+            Utils.startDownload(url2, DirectoryUtils.FOLDER, context2, context.getString(R.string.instagram_story) + System.currentTimeMillis() + context.getString(R.string.png));
         });
     }
+
     @Override
     public int getItemCount() {
         ArrayList<ItemModel> arrayList = this.storyItemModelList;

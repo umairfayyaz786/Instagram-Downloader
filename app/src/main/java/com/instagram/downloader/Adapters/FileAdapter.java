@@ -10,8 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.Interface.FileClickInterface;
 import com.instagram.downloader.R;
@@ -45,27 +47,27 @@ public class FileAdapter extends RecyclerView.Adapter<FileAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") int i) {
         File fileItem = fileArrayList.get(i);
-        @SuppressLint("SimpleDateFormat") String format = new SimpleDateFormat("dd-MM-yyyy  hh:mm a").format(new Date(fileItem.lastModified()));
+        @SuppressLint("SimpleDateFormat") String format = new SimpleDateFormat(context.getString(R.string.dd_mm_yyyy_hh_mm_a)).format(new Date(fileItem.lastModified()));
         viewHolder.textViewName.setText(fileArrayList.get(i).getName());
         viewHolder.textViewTime.setText(format);
 
         try {
             String extension = fileItem.getName().substring(fileItem.getName().lastIndexOf("."));
-            if (extension.equals(".mp4")) {
+            if (extension.equals(context.getString(R.string.mp4))) {
                 viewHolder.imageViewPlay.setVisibility(View.VISIBLE);
             } else {
                 viewHolder.imageViewPlay.setVisibility(View.GONE);
             }
             Glide.with(context).load(fileItem.getPath()).into(viewHolder.imageViewCover);
         } catch (Exception ex) {
-            Log.d(TAG, "onBindViewHolder: "+ex.getLocalizedMessage());
+            Log.d(TAG, "onBindViewHolder: " + ex.getLocalizedMessage());
         }
 
         viewHolder.relativeLayoutContent.setOnClickListener(v -> fileListClickInterface.getPosition(i, fileItem));
 
         viewHolder.imageViewPlay.setOnClickListener(v -> {
             Intent intent = new Intent(context, VideoPlayerActivity.class);
-            intent.putExtra("PathVideo", fileItem.getPath().toString());
+            intent.putExtra(context.getString(R.string.pathvideo), fileItem.getPath().toString());
             context.startActivity(intent);
         });
 

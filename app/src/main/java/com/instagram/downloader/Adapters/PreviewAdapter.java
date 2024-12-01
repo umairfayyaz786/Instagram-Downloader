@@ -8,13 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
 import androidx.viewpager.widget.PagerAdapter;
+
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.Views.Activities.PreviewActivity;
 import com.instagram.downloader.R;
 import com.instagram.downloader.Views.Activities.VideoPlayerActivity;
 
 import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -34,7 +37,7 @@ public class PreviewAdapter extends PagerAdapter {
 
 
     @Override
-    public int getItemPosition(Object object){
+    public int getItemPosition(Object object) {
         return PagerAdapter.POSITION_NONE;
     }
 
@@ -56,9 +59,9 @@ public class PreviewAdapter extends PagerAdapter {
         Glide.with(context).load(imageList.get(position).getPath()).into(imageViewCover);
         view.addView(imageLayout, 0);
         String extension = imageList.get(position).getName().substring(imageList.get(position).getName().lastIndexOf("."));
-        if (extension.equals(".mp4")){
+        if (extension.equals(context.getString(R.string.mp4))) {
             imageViewPlay.setVisibility(View.VISIBLE);
-        }else {
+        } else {
             imageViewPlay.setVisibility(View.GONE);
         }
 
@@ -68,14 +71,11 @@ public class PreviewAdapter extends PagerAdapter {
             context.startActivity(intent);
         });
 
-        imageViewPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(context, VideoPlayerActivity.class);
-                intent.putExtra("PathVideo", imageList.get(position).getPath());
-                context.startActivity(intent);
+        imageViewPlay.setOnClickListener(v -> {
+            Intent intent = new Intent(context, VideoPlayerActivity.class);
+            intent.putExtra(context.getString(R.string.pathvideo), imageList.get(position).getPath());
+            context.startActivity(intent);
 
-            }
         });
 
         return imageLayout;

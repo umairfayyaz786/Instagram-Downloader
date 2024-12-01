@@ -83,4 +83,7 @@
     <string name="fullscreen">FullScreen</string>
     <string name="set_icon_full_screen">--set icon full screen--</string>
     <string name="set_icon_small_full_screen">--set icon small full screen--</string>
+    <string name="dd_mm_yyyy_hh_mm_a">dd-MM-yyyy  hh:mm a</string>
+    <string name="instagram_story">Instagram_story_</string>
+    <string name="png">.png</string>
 </resources>

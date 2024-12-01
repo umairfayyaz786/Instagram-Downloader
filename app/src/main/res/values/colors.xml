@@ -20,6 +20,8 @@
     <color name="colorPrimary">#9874a7</color>
     <color name="colorPrimaryDark">#E1306C</color>
     <color name="colorAccent">#A9E1306C</color>
+    <color name="red">#EA4956</color>
+    <color name="Gray">#7A7A7A</color>
 
 
     <color name="blue_bg_light">#e8eaf6</color>

@@ -4,6 +4,8 @@ package com.instagram.downloader.Views.Activities;
 import static com.instagram.downloader.Utils.DirectoryUtils.shareImage;
 import static com.instagram.downloader.Utils.DirectoryUtils.shareVideo;
 
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,6 +24,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.instagram.downloader.Adapters.PreviewAdapter;
 import com.instagram.downloader.R;
+import com.instagram.downloader.Utils.DirectoryUtils;
+import com.instagram.downloader.Utils.StatusColorState;
 import com.instagram.downloader.Utils.Utils;
 import com.instagram.downloader.databinding.ActivityPreviewBinding;
 
@@ -59,7 +64,10 @@ public class PreviewActivity extends AppCompatActivity {
         }
         initViews();
 
-
+        DirectoryUtils.statusColorChanger(this , android.R.color.white, StatusColorState.ColorOther);
+        Drawable homeIcon = ContextCompat.getDrawable(this, R.drawable.ic_round_arrow_back_menu);
+        homeIcon.setColorFilter(ContextCompat.getColor(this, R.color.black), PorterDuff.Mode.SRC_IN);
+        binding.toolbar.setNavigationIcon(homeIcon);
     }
 
     public void initViews(){

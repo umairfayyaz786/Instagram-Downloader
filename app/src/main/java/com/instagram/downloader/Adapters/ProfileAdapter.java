@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.bumptech.glide.Glide;
 import com.instagram.downloader.Interface.UserListInterface;
 import com.instagram.downloader.R;
@@ -39,13 +41,10 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") int i) {
         viewHolder.textViewName.setText(this.trayModelArrayList.get(i).getUser().getFullname());
         Glide.with(this.context).load(this.trayModelArrayList.get(i).getUser().getProfilepicurl()).thumbnail(0.2f).into(viewHolder.imageViewCover);
-        viewHolder.relativeLayoutContent.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                userListInterface.FacebookUserListClick(i, trayModelArrayList.get(i));
-            }
-        });
+        viewHolder.relativeLayoutContent.setOnClickListener(view -> userListInterface.FacebookUserListClick(i, trayModelArrayList.get(i)));
 
     }
+
     @Override
     public int getItemCount() {
         ArrayList<TrayModel> arrayList = this.trayModelArrayList;
